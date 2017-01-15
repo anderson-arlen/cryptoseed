@@ -1,0 +1,132 @@
+{
+	"root": true,
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"jsx": true
+	},
+	"plugins": [
+		"react"
+	],
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"react/jsx-uses-vars": 2,
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-extra-semi": "error",
+		"no-extra-parens": [
+			"error",
+			"all",
+			{
+				"conditionalAssign": false
+			}
+		],
+		"no-alert": "error",
+		"no-unreachable": "error",
+		"no-irregular-whitespace": "error",
+		"eqeqeq": [
+			"error",
+			"smart"
+		],
+		"dot-notation": "error",
+		"no-shadow": "error",
+		"camelcase": "error",
+		"comma-spacing": [
+			"error",
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"require-yield": 0,
+		"brace-style": [
+			"error",
+			"1tbs",
+			{
+				"allowSingleLine": false
+			}
+		],
+		"comma-style": [
+			"error",
+			"last"
+		],
+		"space-before-blocks": [
+			"error",
+			"always"
+		],
+		"space-before-function-paren": [
+			"error",
+			"never"
+		],
+		"space-in-parens": [
+			"error",
+			"never"
+		],
+		"arrow-body-style": [
+			"error",
+			"always"
+		],
+		"arrow-spacing": [
+			"error",
+			{
+				"before": true,
+				"after": true
+			}
+		],
+		"arrow-parens": "off",
+		"prefer-arrow-callback": [
+			"error",
+			{
+				"allowNamedFunctions": true
+			}
+		],
+		"no-trailing-spaces": [
+			"error",
+			{
+				"skipBlankLines": true
+			}
+		],
+		"object-shorthand": [
+			"error",
+			"always"
+		],
+		"no-var": "error",
+		"prefer-const": "warn",
+		"prefer-template": "error",
+		"template-curly-spacing": "error",
+		"no-spaced-func": "error",
+		"yoda": "error",
+		"newline-before-return": "warn",
+		"new-parens": "error",
+		"max-statements-per-line": "error",
+		"max-depth": [
+			"error",
+			{
+				"max": 3
+			}
+		]
+	},
+	"globals": {
+		"document": true
+	}
+}

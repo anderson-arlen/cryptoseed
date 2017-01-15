@@ -1,0 +1,27 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	color: rgb(220, 220, 220);
+	background-color: rgb(31, 31, 31);
+	margin: 0;
+}
+
+.row {
+	margin: 0;
+}
+
+a {
+	color: rgb(117, 117, 117);
+    text-decoration: none;
+}
+
+a:hover {
+	color: rgb(155, 155, 155);
+}
