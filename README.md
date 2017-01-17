@@ -31,6 +31,16 @@ No matter what you do there is risk, but once encrypted your seed is pretty safe
 Installation
 ------------
 
+#### Prebuilt packages
+[Ubuntu/Debian](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.0.1/CryptoSeed_1.0.1_amd64.deb)  
+[Windows x64 (installer)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.0.1/CryptoSeed.Setup.1.0.1.exe)  
+[Windows x64 (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.0.1/CryptoSeed.1.0.1.win64.zip)
+
+
+*OSX coming soon*
+
+[View releases](https://github.com/anderson-arlen/cryptoseed/releases)
+
 #### Development install
 ```shell
 	git clone git@github.com:anderson-arlen/cryptoseed.git
