@@ -56,7 +56,7 @@ The U.S. Government Department of Commerce, Bureau of Industry and Security (BIS
 
 License
 -------
-Copyright (c) 2016 Arlen Anderson
+Copyright (c) 2017 Arlen Anderson
 
 License under The MIT License (MIT)
 
