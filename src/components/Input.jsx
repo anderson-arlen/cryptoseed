@@ -105,7 +105,7 @@ class Input extends React.Component {
 
 		return (
 			<div className="row center-xs">
-				<div className="col-xs-6">
+				<div className="col-xs-6 start-xs">
 					<TextField
 						floatingLabelText="Recovery Seed"
 						onChange={this.handleChangeInput}
