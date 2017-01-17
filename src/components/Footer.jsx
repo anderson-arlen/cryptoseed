@@ -3,7 +3,9 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 
 import CodeIcon from 'material-ui/svg-icons/action/code';
 
-const qr = require('qr-image');
+const
+	qr = require('qr-image'),
+	{shell} = require('electron');
 
 class Footer extends React.Component {
 	constructor(props) {
@@ -24,6 +26,10 @@ class Footer extends React.Component {
 		};
 
 		this.handleShowQrCode = this.handleShowQrCode.bind(this);
+	}
+
+	handleGithubLink() {
+		shell.openExternal('https://github.com/anderson-arlen');
 	}
 
 	handleShowQrCode() {
@@ -56,7 +62,7 @@ class Footer extends React.Component {
 		return (
 			<div>
 				<div className="row center-xs">
-					<a href="https://github.com/anderson-arlen">
+					<a href="#" onClick={this.handleGithubLink}>
 						<div className="row center-xs middle-xs">
 							<CodeIcon style={this.iconStyle}/>&nbsp;by Arlen Anderson
 						</div>
