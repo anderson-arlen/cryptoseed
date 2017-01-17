@@ -1,4 +1,4 @@
-CryptoSeed
+![logo](https://raw.githubusercontent.com/anderson-arlen/cryptoseed/master/build/icons/32x32.png)CryptoSeed
 ===================
 ### Secure your bitcoin recovery seed.
 
@@ -6,7 +6,11 @@ Writing down your BIP32 recovery seeds on plain paper might be solid electronic 
 
 why pay for other solutions that still leave your seed in plain text when you can print out and laminate a business card with your encrypted recovery seed on it for free. You could keep a copy in your wallet, or in a safe, or even hide it in plain sight.
 
+![Encryption Screenshot](https://raw.githubusercontent.com/anderson-arlen/cryptoseed/master/encrypt.png)
+
 When it comes time to use your recovery seed, just scan the QR Code with your phone and decrypt it with CryptoSeed.
+
+![Decryption Screenshot](https://raw.githubusercontent.com/anderson-arlen/cryptoseed/master/decrypt.png)
 
 ----------
 
@@ -14,7 +18,7 @@ When it comes time to use your recovery seed, just scan the QR Code with your ph
 How secure is it?
 -------------
 
-Your recovery seed is encrypted with the [Cipher Block Chaining (CBC)](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC) mode of the [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) with a 256 bit key length. Your key is generated using a password of your choice and a random salt, hashed 1 million times with [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2). The CBC [Initialization Vector](https://en.wikipedia.org/wiki/Initialization_vector) is randomly generated and hashed with the same salt another 1 million times. Encrypting the same data with the same key will yield a different result every time.
+Your recovery seed is encrypted with the [Cipher Block Chaining (CBC)](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC) mode of the [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) with a 256 bit key length. Your key is generated using a password of your choice and a [random salt](https://en.wikipedia.org/wiki/Salt_(cryptography), hashed 1 million times with [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2). The CBC [Initialization Vector](https://en.wikipedia.org/wiki/Initialization_vector) is randomly generated and hashed with the same salt another 1 million times. Encrypting the same data with the same key will yield a different result every time.
 
 **If you forget your password, your seed is lost. There is no recovery.**
 
