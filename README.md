@@ -18,7 +18,7 @@ When it comes time to use your recovery seed, just scan the QR Code with your ph
 How secure is it?
 -------------
 
-Your recovery seed is encrypted with the [Cipher Block Chaining (CBC)](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC) mode of the [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) with a 256 bit key length. Your key is generated using a password of your choice and a [random salt](https://en.wikipedia.org/wiki/Salt_(cryptography), hashed 1 million times with [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2). The CBC [Initialization Vector](https://en.wikipedia.org/wiki/Initialization_vector) is randomly generated and hashed with the same salt another 1 million times. Encrypting the same data with the same key will yield a different result every time.
+Your recovery seed is encrypted with the [Cipher Block Chaining (CBC)](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC) mode of the [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) with a 256 bit key length. Your key is generated using a password of your choice and a [random salt](https://en.wikipedia.org/wiki/Salt_(cryptography)), hashed 1 million times with [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2). The CBC [Initialization Vector](https://en.wikipedia.org/wiki/Initialization_vector) is randomly generated and hashed with the same salt another 1 million times. Encrypting the same data with the same key will yield a different result every time.
 
 **If you forget your password, your seed is lost. There is no recovery.**
 
