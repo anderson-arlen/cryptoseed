@@ -38,18 +38,17 @@ class Application extends React.Component {
 			error: null
 		});
 
-		let key, hashedIv, cipher, encrypted, blob, qrcode;
+		let key, cipher, encrypted, blob, qrcode;
 		const
 			salt = await randomBytes(32),
-			iv = await randomBytes(32);
+			iv = await randomBytes(16);
 
 
 		try {
 			key = await pbkdf2(password, salt, 1000000, 32, 'sha512');
-			hashedIv = await pbkdf2(iv, salt, 1000000, 16, 'sha512');
-			cipher = createCipheriv('aes256', key, hashedIv);
+			cipher = createCipheriv('aes256', key, iv);
 			encrypted = cipher.update(input, 'utf8', 'base64') + cipher.final('base64');
-			blob = `${salt.toString('base64')}:${iv.toString('base64')}:${encrypted}`;
+			blob = `${salt.toString('base64')}|${iv.toString('base64')}|${encrypted}`;
 			qrcode = qr.imageSync(blob);
 		} catch (e) {
 			return this.setState({
@@ -78,18 +77,23 @@ class Application extends React.Component {
 		});
 
 		let decrypted,
-			[salt, iv, encrypted] = input.split(':'), //eslint-disable-line prefer-const
-			key, hashedIv, decipher;
+			[salt, iv, encrypted] = input.split('|'), //eslint-disable-line prefer-const
+			key, decipher;
+
+
 
 		try {
-
-			salt = Buffer.from(salt, 'base64');
-			iv = Buffer.from(iv, 'base64');
-
+			if (!(salt && iv && encrypted)) {
+				[salt, iv, encrypted] = input.split(':');
+				salt = Buffer.from(salt, 'base64');
+				iv = await pbkdf2(Buffer.from(iv, 'base64'), salt, 1000000, 16, 'sha512');
+			} else {
+				salt = Buffer.from(salt, 'base64');
+				iv = Buffer.from(iv, 'base64');
+			}
 
 			key = await pbkdf2(password, salt, 1000000, 32, 'sha512');
-			hashedIv = await pbkdf2(iv, salt, 1000000, 16, 'sha512');
-			decipher = createDecipheriv('aes256', key, hashedIv);
+			decipher = createDecipheriv('aes256', key, iv);
 			decrypted = decipher.update(encrypted, 'base64', 'utf8') + decipher.final('utf8');
 		} catch (e) {
 			return this.setState({
@@ -111,7 +115,7 @@ class Application extends React.Component {
 
 	render() {
 		const {encrypted, decrypted, thinking, qrcode, error} = this.state;
-		
+
 		return (
 			<div>
 				<div className="row center-xs" style={{margin: 25}}>

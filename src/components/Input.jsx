@@ -79,9 +79,11 @@ class Input extends React.Component {
 			});
 		}
 
-		const [salt, iv, encrypted] = input.split(':');
+		const
+			test = input.split('|'),
+			test2 = input.split(':');
 
-		if (!salt || !iv || !encrypted) {
+		if (test.length !== 3 && test2.length !== 3) {
 			return this.setState({
 				inputError: 'Invalid hash'
 			});
