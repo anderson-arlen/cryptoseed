@@ -1,6 +1,6 @@
 {
   "name": "CryptoSeed",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Secure your bitcoin recovery seed.",
   "main": "main.js",
   "scripts": {
