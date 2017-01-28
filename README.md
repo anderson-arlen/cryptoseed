@@ -32,9 +32,10 @@ Installation
 ------------
 
 #### Prebuilt packages
-[Ubuntu/Debian](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.0.1/CryptoSeed_1.0.1_amd64.deb)  
-[Windows x64 (installer)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.0.1/CryptoSeed.Setup.1.0.1.exe)  
-[Windows x64 (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.0.1/CryptoSeed.1.0.1.win64.zip)
+[Ubuntu/Debian (installer)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_amd64.deb)  
+[Linux (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_linux_amd64.zip)  
+[Windows x64 (installer)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed.Setup.1.1.0.exe)  
+[Windows x64 (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_win64.zip)
 
 
 *OSX coming soon*
