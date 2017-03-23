@@ -2,9 +2,9 @@
 ===================
 ### Secure your bitcoin recovery seed.
 
-Writing down your BIP32 recovery seeds on plain paper might be solid electronic security, but terrible physical security. Not everyone has a safe they can keep stuff like that in. CryptoSeed encrypts your recovery seed with AES256 and encodes the encrypted data into a QR Code which you can print out and keep anywhere.
+Writing down your bitcoin recovery seeds on plain paper might be solid electronic security, but terrible physical security. Not everyone has a safe they can keep stuff like that in. CryptoSeed encrypts your recovery seed with AES256 and encodes the encrypted data into a QR Code which you can print out and keep anywhere.
 
-why pay for other solutions that still leave your seed in plain text when you can print out and laminate a business card with your encrypted recovery seed on it for free. You could keep a copy in your wallet, or in a safe, or even hide it in plain sight.
+Why pay for solutions that still leave your seed in plain text when you can print out and laminate a business card with your encrypted recovery seed on it for free. You could keep a copy in your wallet, or in a safe, or even hide it in plain sight.
 
 ![Encryption Screenshot](https://raw.githubusercontent.com/anderson-arlen/cryptoseed/master/encrypt.png)
 
