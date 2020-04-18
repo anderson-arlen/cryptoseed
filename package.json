@@ -7,8 +7,9 @@
     "start": "webpack --config webpack-config.js --progress --inline --colors && electron .",
     "watch": "webpack --config webpack-config.js --progress --inline --colors --watch",
     "lint": "eslint --ext .js,.jsx .",
-    "pack:linux": "build --linux deb --x64",
-    "pack:windows": "build --win --x64"
+    "pack:linux": "electron-builder build --linux deb --x64",
+    "pack:windows": "electron-builder build --win --x64",
+    "pack:osx": "electron-builder build --mac zip --x64"
   },
   "repository": "git@github.com:anderson-arlen/cryptoseed.git",
   "keywords": [

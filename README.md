@@ -35,10 +35,8 @@ Installation
 [Ubuntu/Debian (installer)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_amd64.deb)  
 [Linux (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_linux_amd64.zip)  
 [Windows x64 (installer)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed.Setup.1.1.0.exe)  
-[Windows x64 (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_win64.zip)
-
-
-*OSX coming soon*
+[Windows x64 (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed_1.1.0_win64.zip)  
+[Mac OSX x64 (zip)](https://github.com/anderson-arlen/cryptoseed/releases/download/v1.1.0/CryptoSeed-1.1.0-mac.zip)
 
 [View releases](https://github.com/anderson-arlen/cryptoseed/releases)
 
@@ -50,9 +48,18 @@ Installation
 ```
 
 #### Build
+First you'll need to install `electron-builder`:
+
+```shell
+	npm install -g electron-builder
+```
+
+Then you can run the build for your desired platform:
+
 ```shell
 	npm run pack:linux
 	npm run pack:windows
+	npm run pack:osx
 ```
 
 -----------------------------------
