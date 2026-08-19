@@ -12,10 +12,25 @@ class Decrypted extends React.Component {
 		if (!output)
 			return null;
 
+		const words = output.trim().split(' ');
+		const isLongForm = words.length === 1 || words.some(w => w.length > 15);
+
+		if (isLongForm) {
+			return (
+				<div className="row center-xs">
+					<div className="col-xs center-xs" style={{margin: 25, color: muiTheme.palette.textColor}}>
+						<h3 style={{color: muiTheme.palette.primary3Color}}>Decrypted Recovery Seed</h3>
+						<div style={{wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}>
+							{output}
+						</div>
+					</div>
+				</div>
+			);
+		}
+
 		const
 			col1 = [],
 			col2 = [],
-			words = output.trim().split(' '),
 			columnLength = Math.floor(words.length / 2);
 
 		let idx = 1;
